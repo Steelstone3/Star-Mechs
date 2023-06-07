@@ -1,4 +1,4 @@
-module github.com/Steelstone3/Golang-Template
+module github.com/Steelstone3/Star-Mechs
 
 go 1.20
 
