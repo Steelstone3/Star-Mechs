@@ -29,7 +29,7 @@ func GetConfirmationFromConsole(question string) bool {
 
 func GetStringFromConsole(prompt string) string {
 	reader := bufio.NewReader(os.Stdin)
-	Print(prompt)
+	print(prompt)
 	text, _ := reader.ReadString('\n')
 	text = strings.TrimSpace(text)
 	return text
@@ -47,6 +47,10 @@ func StringReplace(outputString string, key string, value string) string {
 	return strings.Replace(outputString, key, value, 1)
 }
 
-func Print(message string) {
+func PrintLine(message string) {
+	fmt.Println(message)
+}
+
+func print(message string) {
 	fmt.Print(message)
 }

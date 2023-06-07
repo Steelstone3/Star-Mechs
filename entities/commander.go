@@ -12,10 +12,6 @@ type Commander struct {
 	CurrentStarSystem StarSystem
 }
 
-func (commander *Commander) UpdateCurrentStarSystem() {
-
-}
-
-func (commander *Commander) UpdateCurrentMission() {
-
+func (commander *Commander) UpdateCurrentStarSystem(starSystem StarSystem) {
+	commander.CurrentStarSystem = starSystem
 }
