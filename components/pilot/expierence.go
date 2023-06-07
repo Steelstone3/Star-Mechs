@@ -15,7 +15,7 @@ type Expierence struct {
 	Level Level
 }
 
-func ConstructRandomExpierence(seed int64) Expierence {
+func constructRandomExpierence(seed int64) Expierence {
 	expierenceLevels := []string{ string(High), string(Moderate), string(Adequate), string(Low) }
 	level := generators.GetRandomString(seed, expierenceLevels)
 

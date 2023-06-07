@@ -1,3 +1,5 @@
 package economy
 
-type Currency struct {}
+type Currency struct {
+	
+}
