@@ -1,0 +1,35 @@
+[package]
+name = "star-mechs"
+version = "0.1.0"
+authors = ["Skippy <steelstone3@gmail.com>"]
+edition = "2021"
+homepage = "https://github.com/Steelstone3/Star-Mechs"
+repository = "https://github.com/Steelstone3/Star-Mechs"
+license = "GPLv3"
+readme = "README.md"
+include = []
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[target.'cfg(target_os = "linux")'.dependencies]
+bevy = { version = "0.13", features = ["wayland", "x11"] }
+wayland-sys = "0.31"
+
+[dependencies]
+bevy = "0.13"
+rayon = "1"
+rstest = "0"
+rand = "0"
+rand_derive2 ="0"
+float-lerp = "0"
+
+[workspace]
+resolver = "2"
+
+# No optimisation for better debugging. Set to 1 for some optimisation
+[profile.dev]
+opt-level = 0
+
+# Enable high optimizations for dependencies (incl. Bevy), but not for our code:
+[profile.dev.package."*"]
+opt-level = 3
